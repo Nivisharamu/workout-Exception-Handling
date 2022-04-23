@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Exception Handling</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+        const student=[{firstName:'Nivisha',lastName:'Ramu'},{firstName:'Deepthi',lastName:'Ramu'}];
+        //var i=0;
+        //alert(student[0].firstName);
+        function getfullname()
+        {
+          var fullName=[];
+          for(var i=0;i<student.length;i++)  
+          {
+              fullName.push(student[i].firstName+" "+student[i].lastName);      
+          }
+          return fullName;
+      }
+      function setfullname(value)
+      {
+        var a=value;
+         try
+          {
+             if(a=="")
+                 return "Value is empty";
+             else if((a.length)>3)
+                 return "String greater than 3";
+             else
+                 return"Value is a string with length three";
+          }
+          catch(error)
+          {
+          } 
+      }
+       console.log(getfullname());
+       console.log(setfullname("You"));
+       console.log(setfullname("Nivisha"));
+       console.log(setfullname(""));
+        </script>
+    </body>
+</html>
